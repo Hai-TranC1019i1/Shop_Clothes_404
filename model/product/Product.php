@@ -66,4 +66,12 @@ class Product
     {
         return $this->price;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
 }

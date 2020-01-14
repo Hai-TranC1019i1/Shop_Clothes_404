@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="inner-header">
             <div class="logo">
-                <a href="home.php"><img src="img/logo.png" alt=""></a>
+                <a href="index.php"><img src="img/logo.png" alt=""></a>
             </div>
             <div class="header-right">
                 <img src="img/icons/search.png" alt="" class="search-trigger">
@@ -35,7 +35,7 @@
             </div>
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li><a class="active" href="home.php">Trang Chủ</a></li>
+                    <li><a class="active" href="view/product/home.php">Trang Chủ</a></li>
                     <li><a href="./categories.html">Cửa Hàng</a>
                         <ul class="sub-menu">
                             <li><a href="product-page.html">Trang Sản Phẩm</a></li>
