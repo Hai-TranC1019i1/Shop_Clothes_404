@@ -3,9 +3,9 @@
 
 class DB
 {
-    private $dsn = "mysql:host=localhost;dbname=404shopclothes.sql";
+    private $dsn = "mysql:host=localhost;dbname=404shopclothes";
     private $user = "root";
-    private $pass = "@Haitran123";
+    private $pass = "";
 
     public function __construct()
     {

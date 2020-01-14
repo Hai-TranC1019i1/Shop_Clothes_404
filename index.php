@@ -1,10 +1,12 @@
 <?php
-require "controller/ShopController.php";
+require "controller/CategoryController.php";
 require "model/cart/Cart.php";
-require "model/product/Product.php";
-require "model/product/ProductDB.php";
+require "model/category/Category.php";
+require "model/category/CategoryDB.php";
+require "model/DB.php";
+use Controller\CategoryController;
 
-$controller = new ShopController();
+$controller = new CategoryController();
 
 ?>
 
@@ -235,14 +237,14 @@ $controller = new ShopController();
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-title">
-                        <h2>Latest Products</h2>
+                        <h2>DANH MỤC</h2>
                     </div>
                     <ul class="product-controls">
                         <li data-filter="*">All</li>
-                        <li data-filter=".dresses">Dresses</li>
-                        <li data-filter=".bags">Bags</li>
-                        <li data-filter=".shoes">Shoes</li>
-                        <li data-filter=".accesories">Accesories</li>
+                        <li data-filter=".dresses">ÁO</li>
+                        <li data-filter=".bags">QUẦN</li>
+                        <li data-filter=".shoes">GIÀY</li>
+                        <li data-filter=".accesories">PHỤ KIỆN</li>
                     </ul>
                 </div>
             </div>

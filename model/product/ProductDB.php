@@ -1,6 +1,5 @@
 <?php
 
-
 class ProductDB
 {
     private $db;
@@ -10,7 +9,6 @@ class ProductDB
         $db = new DB();
         $this->db = $db->connection();
     }
-
 
 
 }
