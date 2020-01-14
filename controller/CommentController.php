@@ -12,14 +12,14 @@ class CommentController
 
     public function index()
     {
-        $comment = $this->commentDB->getAll();
-        include_once "view/list.php";
+        $comments = $this->commentDB->getAll();
+        include_once "view/comment/list.php";
     }
 
     public function add()
     {
         if ($_SERVER['REQUEST_METHOD'] == "GET"){
-            include_once "view/add.php";
+            include "view/comment/add.php";
         }elseif($_SERVER['REQUEST_METHOD'] =="POST"){
             $comment = new Comment($_POST['username'],$_POST['createdDate'],$_POST['content']);
             $this->commentDB->add($comment);
@@ -31,7 +31,8 @@ class CommentController
        if ($_SERVER['REQUEST_METHOD'] == "GET"){
            $id = $_GET['id'];
            $comment = $this->commentDB->getId($id);
-           include "view/delete.php";
+           include "view/comment/delete.php";
+
        }else{
            $id = $_POST['id'];
            $this->commentDB->delete($id);

@@ -3,7 +3,11 @@
         <div class="newslatter-form">
             <div class="row">
                 <div class="col-lg-12">
+                    <H3 style="text-align: center; color:#cccccc">Vui Lòng Nhập Đánh Giá Về Chúng Tôi</H3>
                     <form action="#">
+                        <input type="text" placeholder="Nhập vào thông tin">
+                        <input type="text" placeholder="Nhập vào thông tin">
+                        <input type="text" placeholder="Nhập vào thông tin">
                         <input type="text" placeholder="Nhập vào thông tin">
                         <button type="submit">Nhận Thông Báo Từ Chúng Tôi</button>
                     </form>

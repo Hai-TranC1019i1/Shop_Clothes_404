@@ -17,8 +17,10 @@ class CommentDB
         $stmt = $this->conn->query($sql);
         $result = $stmt->fetchAll();
         $arr = [];
+
         foreach ($result as $item){
-            $comment = new Comment($item['username'],$item['createdDate'],$item['content']);
+            $comment = new Comment($item['username'],$item['createddate'],$item['content']);
+            $comment->setId($item['id']);
             array_push($arr,$comment);
         }
         return $arr;
@@ -31,6 +33,7 @@ class CommentDB
         $stmt->bindParam(':username',$comment->getUsername());
         $stmt->bindParam(':createdDate',$comment->getCreatedDate());
         $stmt->bindParam(':content',$comment->getContent());
+        $stmt->execute();
     }
 
     public function getId($id)
@@ -39,7 +42,7 @@ class CommentDB
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetch();
-        $comment = new Comment($result['username'],$result['createdDate'],$result['content']);
+        $comment = new Comment($result['username'],$result['createddate'],$result['content']);
         $comment->setId($id);
         return $comment;
     }

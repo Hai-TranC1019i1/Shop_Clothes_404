@@ -1,16 +1,13 @@
 <?php
 
-require "controller/ShopController.php";
-require "model/cart/Cart.php";
-require "model/product/Product.php";
-require "model/product/ProductDB.php";
-<<<<<<< HEAD
+//require "controller/ShopController.php";
+//require "model/cart/Cart.php";
+//require "model/product/Product.php";
+//require "model/product/ProductDB.php";
 require "model/Comment/Comment.php";
 require "model/Comment/CommentDB.php";
 require "controller/CommentController.php";
-=======
 require "model/DB.php";
->>>>>>> 1b432e647e7db1c9ec4dcb21f0dd28300f161717
 
 
 $controller = new CommentController();
@@ -47,7 +44,7 @@ $controller = new CommentController();
 <body>
 
 <?php include "header.php"; ?>
-
+<input type="hidden" name="createdD">
 <div class="main-content">
     <?php
         $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
@@ -55,10 +52,12 @@ $controller = new CommentController();
             case "add":
                 $controller->add();
                 break;
+            case "delete":
+                $controller->delete();
+                break;
             default:
                 $controller->index();
         }
-
         ?>
 </div>
 

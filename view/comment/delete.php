@@ -1,4 +1,4 @@
-<h1>Bạn chắc chắn muốn xóa khách hàng này?</h1>
+
 <h3><?php echo $comment->getUsername(); ?></h3>
 <form action="./index.php?page=delete" method="post">
     <input type="hidden" name="id" value="<?php echo $comment->getId(); ?>"/>
@@ -7,8 +7,8 @@
         <a class="btn btn-default" href="index.php">Cancel</a>
     </div>
 </form>
-<h2>Coment</h2>
-<a href="./index.php?page=add">Thêm mới</a>
+<h2>Comment</h2>
+<a href="./index.php?page=add">Add New Content</a>
 <table class="table">
     <thead>
     <tr>
@@ -21,7 +21,7 @@
     </thead>
     <tbody>
     <tr>
-        <td><?php echo $comment->getUserame() ?></td>
+        <td><?php echo $comment->getUsername() ?></td>
         <td><?php echo $comment->getCreatedDate() ?></td>
         <td><?php echo $comment->getContent() ?></td>
     </tr>
