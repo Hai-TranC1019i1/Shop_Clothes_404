@@ -7,13 +7,13 @@ class CategoryController
 
     public function __construct()
     {
-        $this->categoryDB = new categoryDB();
+        $this->categoryDB = new \categoryDB();
     }
 
     public function index()
     {
         $category = $this->categoryDB->getAll();
-        include "view/list.php";
+        include "view/category/list.php";
     }
 
     public function add()
