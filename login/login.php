@@ -2,6 +2,7 @@
 require "../model/user/UserDB.php";
 require "../model/user/User.php";
 require "../model/DB.php";
+
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $username = $_POST['username'];
      $password = $_POST['password'];
