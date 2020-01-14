@@ -3,8 +3,12 @@ require "controller/ShopController.php";
 require "model/cart/Cart.php";
 require "model/product/Product.php";
 require "model/product/ProductDB.php";
+require "model/Comment/Comment.php";
+require "model/Comment/CommentDB.php";
+require "controller/CommentController.php";
 
-$controller = new ShopController();
+
+$controller = new CommentController();
 
 ?>
 
