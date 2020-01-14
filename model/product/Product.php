@@ -5,16 +5,18 @@ class Product
 {
     private $id;
     private $name;
+    private $image;
     private $price;
     private $type;
     private $description;
 
-    public function __construct($name, $price, $type, $description)
+    public function __construct($name, $price, $type, $description,$image)
     {
         $this->name = $name;
         $this->price = $price;
         $this->type = $type;
         $this->description = $description;
+        $this->image = $image;
     }
 
     /**
