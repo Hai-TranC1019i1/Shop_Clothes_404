@@ -1,3 +1,25 @@
+<?php
+require "../model/user/UserDB.php";
+require "../model/user/User.php";
+require "../model/DB.php";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $retype_pass = $_POST['retype_pass'];
+    $email = $_POST['email'];
+    if ($password == $retype_pass) {
+        $userDB = new UserDB();
+        $user = new User($username, $password, $email);
+        $userDB->register($user);
+        echo "<script>alert(\"Đăng Ký Thành Công\");</script>";
+    }else{
+        echo "<script>alert(\"Mật Khẩu Không Trùng Khớp\");</script>";
+    }
+};
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +50,7 @@
 <div class="limiter">
     <div class="container-login100" style="background-image: url('images/img-01.jpg');">
         <div class="wrap-login100 p-t-190 p-b-30">
-            <form class="login100-form validate-form">
+            <form class="login100-form validate-form" method="post">
                 <div class="login100-form-avatar">
                     <img src="images/img-02.png" alt="AVATAR">
                 </div>
@@ -37,7 +59,7 @@
                         <h1>404 - FNF</h1>
 					</span>
 
-                <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+                <div class="wrap-input100 validate-input m-b-10" data-validate="Username is required">
                     <input class="input100" type="text" name="username" placeholder="Username">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -45,19 +67,27 @@
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                <div class="wrap-input100 validate-input m-b-10" data-validate="Password is required">
+                    <input class="input100" type="password" name="password" placeholder="Password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-lock"></i>
 						</span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                <div class="wrap-input100 validate-input m-b-10" data-validate="Password is required">
+                    <input class="input100" type="password" name="retype_pass" placeholder="Retype password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-lock"></i>
+						</span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate="email is required">
+                    <input class="input100" type="text" name="email" placeholder="Email">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-user"></i>
 						</span>
                 </div>
 
@@ -67,12 +97,16 @@
                     </button>
                 </div>
 
+                <div class="text-center w-full p-t-25 p-b-230">
+                    <a href="#" class="txt1">
+                        Đăng Nhập
+                    </a>
+                </div>
+
             </form>
         </div>
     </div>
 </div>
-
-
 
 
 <!--===============================================================================================-->

@@ -1,3 +1,19 @@
+<?php
+require "../model/user/UserDB.php";
+require "../model/user/User.php";
+require "../model/DB.php";
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $username = $_POST['username'];
+//     $password = $_POST['password'];
+//     $userDB = new UserDB();
+//     $userDB->login();
+//
+//}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +44,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/img-01.jpg');">
 			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post">
 					<div class="login100-form-avatar">
 						<img src="images/img-02.png" alt="AVATAR">
 					</div>
@@ -54,9 +70,11 @@
 					</div>
 
 					<div class="container-login100-form-btn p-t-10">
-						<button class="login100-form-btn">
-							Login
-						</button>
+                        <a href="../index.php">
+                            <button class="login100-form-btn">
+                                Login
+                            </button>
+                        </a>
 					</div>
 
 					<div class="text-center w-full p-t-25 p-b-230">
@@ -66,7 +84,7 @@
 					</div>
 
 					<div class="text-center w-full">
-						<a class="txt1" href="register.html">
+						<a class="txt1" href="register.php">
 							Create new account
 							<i class="fa fa-long-arrow-right"></i>						
 						</a>

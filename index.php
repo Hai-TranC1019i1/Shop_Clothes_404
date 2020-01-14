@@ -3,8 +3,11 @@ require "controller/ShopController.php";
 require "model/cart/Cart.php";
 require "model/product/Product.php";
 require "model/product/ProductDB.php";
-
+require "model/DB.php";
+require "model/user/User.php";
+require "model/user/UserDB.php";
 $controller = new ShopController();
+var_dump();
 
 ?>
 
@@ -57,7 +60,7 @@ $controller = new ShopController();
     <div class="container-fluid">
         <div class="inner-header">
             <div class="logo">
-                <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                <a href="./index.php"><img src="img/logo.png" alt=""></a>
             </div>
             <div class="header-right">
                 <img src="img/icons/search.png" alt="" class="search-trigger">
@@ -68,12 +71,12 @@ $controller = new ShopController();
                 </a>
             </div>
             <div class="user-access">
-                <a href="login/register.html">Register</a>
-                <a href="login/login.html" class="in">Sign in</a>
+                <a href="login/register.php">Register</a>
+                <a href="login/login.php" class="in">Sign in</a>
             </div>
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li><a class="active" href="./index.html">Trang Chủ</a></li>
+                    <li><a class="active" href="./index.php">Trang Chủ</a></li>
                     <li><a href="./categories.html">Cửa Hàng</a>
                         <ul class="sub-menu">
                             <li><a href="product-page.html">Trang Sản Phẩm</a></li>
@@ -469,10 +472,10 @@ $controller = new ShopController();
     <div class="social-links-warp" style="text-align: center">
         <div class="container">
             <div class="social-links">
-                <a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-                <a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-                <a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-                <a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+                <a href="facebook.com/quocdan.info" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+                <a href="facebook.com/quocdan.info" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+                <a href="facebook.com/quocdan.info" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+                <a href="facebook.com/quocdan.info" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
             </div>
         </div>
 
