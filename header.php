@@ -30,8 +30,8 @@
                 </a>
             </div>
             <div class="user-access">
-                <a href="login/register.html">Register</a>
-                <a href="login/login.html" class="in">Sign in</a>
+                <a href="login/register.php">Register</a>
+                <a href="login/login.php" class="in">Sign in</a>
             </div>
             <nav class="main-menu mobile-menu">
                 <ul>

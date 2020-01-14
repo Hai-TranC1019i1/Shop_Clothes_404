@@ -5,7 +5,7 @@ class DB
 {
     private $dsn = "mysql:host=localhost;dbname=404shopclothes";
     private $user = "root";
-    private $pass = "@Haitran123";
+    private $pass = "@Dannguyen123";
 
     public function __construct()
     {
