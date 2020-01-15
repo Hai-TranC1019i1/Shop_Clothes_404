@@ -12,11 +12,12 @@ class ProductDB
 
     public function getById($id)
     {
+
         $sql = "SELECT * FROM products WHERE id = ?";
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(1, $id);
+        $stmt->execute();
         $result = $stmt->fetch();
-
         $product = new Product($result["name"],
             $result["price"],
             $result["type"],
@@ -101,7 +102,7 @@ class ProductDB
 
     public function edit($product)
     {
-        $sql = "UPDATE FROM products SET name = ?, image = ?, price = ?, type = ?, description = ? WHERE id = ?";
+        $sql = "UPDATE products SET name = ?, image = ?, price = ?, type = ?, description = ? WHERE id = ?";
         $stmt = $this->db->prepare($sql);
 
         $stmt->bindParam(1, $product->getName());

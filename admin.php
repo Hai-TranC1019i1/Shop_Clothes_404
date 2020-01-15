@@ -1,10 +1,14 @@
 <?php
 
 require "controller/ShopController.php";
+require "controller/CategoryController.php";
 require "model/cart/Cart.php";
 require "model/product/Product.php";
 require "model/product/ProductDB.php";
+require "model/category/CategoryDB.php";
+require "model/category/Category.php";
 require "model/DB.php";
+use Controller\CategoryController;
 
 ?>
 

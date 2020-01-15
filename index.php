@@ -1,13 +1,16 @@
 <?php
-
 require "controller/ShopController.php";
+require "controller/CategoryController.php";
 require "model/cart/Cart.php";
+require "model/category/Category.php";
+require "model/category/CategoryDB.php";
+require "model/DB.php";
 require "model/product/Product.php";
 require "model/product/ProductDB.php";
-require "model/DB.php";
+use Controller\CategoryController;
 
-?>
-
+//$controller = new CategoryController();
+$controller = new ShopController();
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -40,7 +43,7 @@ require "model/DB.php";
 <?php include "header.php"; ?>
 
 <div class="main-content">
-    <?php
+        <?php
         $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
         $action = isset($_REQUEST["action"]) ? $_REQUEST["action"] : null;
 
@@ -66,8 +69,8 @@ require "model/DB.php";
             default:
                 $controller->index();
         }
-
         ?>
+
 </div>
 
 <!-- Footer Section Begin -->
