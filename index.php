@@ -9,8 +9,8 @@ require "model/product/Product.php";
 require "model/product/ProductDB.php";
 use Controller\CategoryController;
 
-//$controller = new CategoryController();
-$controller = new ShopController();
+
+?>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -54,7 +54,6 @@ $controller = new ShopController();
         default:
             $controller = new ShopController();
     }
-
 
         switch ($action) {
             case "add":
