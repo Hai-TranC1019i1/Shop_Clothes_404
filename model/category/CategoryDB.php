@@ -13,7 +13,7 @@ class CategoryDB
 
     public function getAll()
     {
-        $sql = "SELECT * FROM category";
+        $sql = "SELECT * FROM categories";
         $stmt = $this->db->query($sql);
         $result = $stmt->fetchAll();
         $arr = [];
@@ -27,7 +27,7 @@ class CategoryDB
 
     public function add($category)
     {
-        $sql = "INSERT INTO category(name ,description) VALUE (?, ?)";
+        $sql = "INSERT INTO categories(name ,description) VALUE (?, ?)";
         $stmt = $this->db->prepare($sql);
 
         $stmt->bindParam(1, $category->getName());

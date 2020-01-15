@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="inner-header">
             <div class="logo">
-                <a href="index.php"><img src="img/logo.png" alt=""></a>
+                <a href="./index.php"><img src="img/logo.png" alt=""></a>
             </div>
             <div class="header-right">
                 <img src="img/icons/search.png" alt="" class="search-trigger">
@@ -35,7 +35,7 @@
             </div>
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li><a class="active" href="view/product/home.php">Trang Chủ</a></li>
+                    <li><a class="active" href="admin.php">Trang Chủ</a></li>
                     <li><a href="./categories.html">Cửa Hàng</a>
                         <ul class="sub-menu">
                             <li><a href="categories.html">Trang Sản Phẩm</a></li>
@@ -43,7 +43,7 @@
                             <li><a href="check-out.html">Thủ Tục Thanh Toán</a></li>
                         </ul>
                     </li>
-                    <li><a href="./product-page.html">About</a></li>
+                    <li><a href="./index.php?page=aboutme">About</a></li>
                     <li><a href="./check-out.html">Blog</a></li>
                     <li><a href="./contact.html">Liên Hệ</a></li>
                 </ul>
