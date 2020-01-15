@@ -4,13 +4,16 @@
 //require "model/cart/Cart.php";
 //require "model/product/Product.php";
 //require "model/product/ProductDB.php";
-require "model/Comment/Comment.php";
-require "model/Comment/CommentDB.php";
-require "controller/CommentController.php";
+//require "model/Comment/Comment.php";
+//require "model/Comment/CommentDB.php";
+//require "controller/CommentController.php";
 require "model/DB.php";
+require "model/order/Order.php";
+require "model/order/OrderDB.php";
+require "controller/OrderController.php";
 
 
-$controller = new CommentController();
+$controller = new OrderController();
 
 ?>
 
@@ -52,12 +55,9 @@ $controller = new CommentController();
             case "add":
                 $controller->add();
                 break;
-            case "delete":
-                $controller->delete();
-                break;
-            case "aboutme":
-                $controller->aboutme();
-                break;
+//            case "delete":
+//                $controller->delete();
+//                break;
             default:
                 $controller->index();
         }
