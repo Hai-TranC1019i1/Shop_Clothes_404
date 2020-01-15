@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="inner-header">
             <div class="logo">
-                <a href="home.php"><img src="img/logo.png" alt=""></a>
+                <a href="./index.php"><img src="img/logo.png" alt=""></a>
             </div>
             <div class="header-right">
                 <img src="img/icons/search.png" alt="" class="search-trigger">
@@ -35,10 +35,10 @@
             </div>
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li><a class="active" href="home.php">Trang Chủ</a></li>
+                    <li><a class="active" href="admin.php">Trang Chủ</a></li>
                     <li><a href="./categories.html">Cửa Hàng</a>
                         <ul class="sub-menu">
-                            <li><a href="product-page.html">Trang Sản Phẩm</a></li>
+                            <li><a href="categories.html">Trang Sản Phẩm</a></li>
                             <li><a href="shopping-cart.html">Thẻ Mua Sắm</a></li>
                             <li><a href="check-out.html">Thủ Tục Thanh Toán</a></li>
                         </ul>
@@ -55,7 +55,7 @@
 <div class="header-info">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="header-item">
                     <img src="img/icons/delivery.png" alt="">
                     <p>Miễn phí ship với đơn hàng trên 5000$ tại Việt Nam</p>

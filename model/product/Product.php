@@ -9,14 +9,24 @@ class Product
     private $price;
     private $type;
     private $description;
+    private $createdDate;
 
-    public function __construct($name, $price, $type, $description,$image)
+    public function __construct($name, $price, $type, $description,$image, $createdDate)
     {
         $this->name = $name;
         $this->price = $price;
         $this->type = $type;
         $this->description = $description;
         $this->image = $image;
+        $this->createdDate = $createdDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
     }
 
     /**
@@ -65,5 +75,13 @@ class Product
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

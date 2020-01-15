@@ -1,23 +1,18 @@
 <?php
 
-
-//require "model/Comment/Comment.php";
-//require "model/Comment/CommentDB.php";
-//require "controller/CommentController.php";
-require "model/order/Order.php";
-require "model/order/OrderDB.php";
-require "controller/OrderController.php";
 require "controller/ShopController.php";
 require "controller/CategoryController.php";
 require "model/cart/Cart.php";
-require "model/category/Category.php";
-require "model/category/CategoryDB.php";
-require "model/DB.php";
 require "model/product/Product.php";
 require "model/product/ProductDB.php";
+require "model/category/CategoryDB.php";
+require "model/category/Category.php";
+require "model/DB.php";
 use Controller\CategoryController;
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -46,40 +41,37 @@ use Controller\CategoryController;
 
 <body>
 
-<?php include "header.php"; ?>
-<input type="hidden" name="createdD">
+<?php include "header-admin.php"; ?>
+
 <div class="main-content">
-        <?php
-        $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
-        $action = isset($_REQUEST["action"]) ? $_REQUEST["action"] : null;
+    <?php
+    $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
+    $action = isset($_REQUEST["action"]) ? $_REQUEST["action"] : null;
 
     switch ($page) {
         case "category":
             $controller = new CategoryController();
             break;
-            case 'order':
-                $controller = new OrderController();
-                break;
         default:
             $controller = new ShopController();
     }
 
 
-        switch ($action) {
-            case "add":
-                $controller->add();
-                break;
-            case "delete":
-                $controller->delete();
-                break;
-            case "edit":
-                $controller->edit();
-                break;
-            default:
-                $controller->index();
-        }
-        ?>
+    switch ($action) {
+        case "add":
+            $controller->add();
+            break;
+        case "delete":
+            $controller->delete();
+            break;
+        case "edit":
+            $controller->edit();
+            break;
+        default:
+            $controller->index();
+    }
 
+    ?>
 </div>
 
 <!-- Footer Section Begin -->
