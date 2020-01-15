@@ -55,6 +55,9 @@ $controller = new CommentController();
             case "delete":
                 $controller->delete();
                 break;
+            case "aboutme":
+                $controller->aboutme();
+                break;
             default:
                 $controller->index();
         }

@@ -38,4 +38,9 @@ class CommentController
            $this->commentDB->delete($id);
        }
     }
+
+    public function aboutme()
+    {
+        include "about_me.php";
+    }
 }
