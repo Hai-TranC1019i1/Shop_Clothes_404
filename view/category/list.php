@@ -9,10 +9,11 @@
     <div class="" style="margin-top: 10px">
         <table class="table">
             <tr>
-                <th>#</th>
+
+                <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
-                <th></th>
+               
             </tr>
 
             <?php  foreach ($categories as $key =>$category): ?>
@@ -20,6 +21,7 @@
                 <th><?php echo ++$key?></th>
                 <th><?php echo $category->getName()?></th>
                 <th><?php echo $category->getDescription()?></th>
+
                 <th>
                     <a href="./admin.php?page=category&action=delete"><input type="button" class="btn btn-danger" value="Delete"></a>
                     <a href="./admin.php?page=category&action=edit"><input type="button" class="btn btn-success" value="Edit"></a>
