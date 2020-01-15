@@ -2,8 +2,8 @@
 
 namespace Controller;
 
-use category;
-use categoryDB;
+use Category;
+use CategoryDB;
 
 class CategoryController
 {
@@ -11,7 +11,7 @@ class CategoryController
 
     public function __construct()
     {
-        $this->categoryDB = new categoryDB();
+        $this->categoryDB = new CategoryDB();
     }
 
     public function index()
@@ -26,9 +26,34 @@ class CategoryController
         include "view/category/add.php";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $category = new Category($_POST['name'],$_POST['description']);
+            $category = new Category($_POST['name'], $_POST['description']);
             var_dump($category);
             $this->categoryDB->add($category);
         }
+    }
+
+    public function delete()
+    {
+        $id = $_GET['id'];
+       $category = $this->categoryDB->getId($id);
+       if ($_SERVER["REQUEST_METHOD"] == "POST") {
+           $id = $_POST["id"];
+           $this->categoryDB->delete($id);
+       };
+        include 'view/category/delete.php';
+
+    }
+
+    public function edit()
+    {
+        $id = $_GET["id"];
+        $category = $this->categoryDB->getId($id);
+
+        if ($_SERVER['REQUEST_METHOD'] == "POST"){
+                $category = new Category($_POST["name"], $_POST["description"]);
+                $category->setId($_POST["id"]);
+                $this->categoryDB->edit($category);
+        }
+        include "view/category/edit.php";
     }
 }

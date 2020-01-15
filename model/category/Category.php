@@ -1,7 +1,7 @@
 <?php
 
 
-class category
+class Category
 {
   private $id;
   private $name;
@@ -43,6 +43,23 @@ class category
     public function getDescription()
     {
         return $this->description;
+    }
+
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 
 

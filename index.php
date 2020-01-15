@@ -9,8 +9,8 @@ require "model/product/Product.php";
 require "model/product/ProductDB.php";
 use Controller\CategoryController;
 
-//$controller = new CategoryController();
-$controller = new ShopController();
+$controller = new CategoryController();
+//$controller = new ShopController();
 ?>
 
 
@@ -50,6 +50,12 @@ $controller = new ShopController();
         switch ($page) {
             case "add":
                 $controller->add();
+                break;
+            case "delete":
+                $controller->delete();
+                break;
+            case "edit":
+                $controller->edit();
                 break;
             default:
                 $controller->index();

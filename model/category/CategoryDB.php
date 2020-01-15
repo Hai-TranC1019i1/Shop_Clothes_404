@@ -1,7 +1,7 @@
 <?php
 
 
-class categoryDB
+class CategoryDB
 {
     private $db;
 
@@ -31,7 +31,40 @@ class categoryDB
         $stmt = $this->db->prepare($sql);
 
         $stmt->bindParam(1, $category->getName());
-        $stmt->bindParam(2,$category->getDescription());
+        $stmt->bindParam(2, $category->getDescription());
         return $stmt->execute();
+    }
+
+    public function delete($id)
+    {
+        var_dump($id);
+        $sql = "DELETE FROM category WHERE id = ?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(1, $id);
+        return $stmt->execute();
+    }
+
+    public function getId($id)
+    {
+        $sql = "SELECT * FROM category WHERE  id = $id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+
+        $category = new Category($result["name"], $result["description"]);
+        $category->setId($id);
+
+        return $category;
+    }
+
+    public function edit($category)
+    {
+        $sql = "UPDATE category SET name = ?, description = ? WHERE  id = ?";
+        $stmt = $this->db->prepare($sql);
+
+        $stmt->bindParam(1,$category->getName());
+        $stmt->bindParam(2,$category->getDescription());
+        $stmt->bindParam(3,$category->getId());
+        $stmt->execute();
     }
 }
