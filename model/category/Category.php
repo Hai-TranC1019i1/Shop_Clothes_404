@@ -4,17 +4,13 @@
 class category
 {
   private $id;
-  private $shirt;
-  private $trousers;
-  private $shoes;
-  private $accessories;
+  private $name;
+  private $description;
 
-  public function __construct($shirt , $trousers, $shoes , $accessories)
+  public function __construct($name , $description)
   {
-      $this->shirt = $shirt;
-      $this->trousers = $trousers;
-      $this->shoes = $shoes;
-      $this->accessories = $accessories;
+    $this->name = $name;
+    $this->description = $description;
   }
 
     /**
@@ -28,32 +24,26 @@ class category
     /**
      * @return mixed
      */
-    public function getShirt()
+    public function getId()
     {
-        return $this->shirt;
+        return $this->id;
     }
 
     /**
      * @return mixed
      */
-    public function getTrousers()
+    public function getName()
     {
-        return $this->trousers;
+        return $this->name;
     }
 
     /**
      * @return mixed
      */
-    public function getShoes()
+    public function getDescription()
     {
-        return $this->shoes;
+        return $this->description;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getAccessories()
-    {
-        return $this->accessories;
-    }
+
 }

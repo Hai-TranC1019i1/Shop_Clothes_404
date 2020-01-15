@@ -18,10 +18,20 @@ class categoryDB
         $result = $stmt->fetchAll();
         $arr = [];
         foreach ($result as $item) {
-            $category = new category($item['shirt'], $item['trousers'], $item['shoes'], $item['accessories']);
+            $category = new Category($item['name'], $item['description']);
             $category->setId($item['id']);
             array_push($arr, $category);
         }
         return $arr;
+    }
+
+    public function add($category)
+    {
+        $sql = "INSERT INTO category(name ,description) VALUE (?, ?)";
+        $stmt = $this->db->prepare($sql);
+
+        $stmt->bindParam(1, $category->getName());
+        $stmt->bindParam(2,$category->getDescription());
+        return $stmt->execute();
     }
 }

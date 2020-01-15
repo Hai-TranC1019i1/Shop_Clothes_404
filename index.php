@@ -9,8 +9,8 @@ require "model/product/Product.php";
 require "model/product/ProductDB.php";
 use Controller\CategoryController;
 
-$controller = new CategoryController();
-
+//$controller = new CategoryController();
+$controller = new ShopController();
 ?>
 
 
@@ -54,8 +54,8 @@ $controller = new CategoryController();
             default:
                 $controller->index();
         }
-
         ?>
+
 </div>
 
 <!-- Footer Section Begin -->
