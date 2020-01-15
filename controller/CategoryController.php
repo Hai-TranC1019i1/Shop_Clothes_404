@@ -2,8 +2,8 @@
 
 namespace Controller;
 
-use category;
-use categoryDB;
+use Category;
+use CategoryDB;
 
 class CategoryController
 {
@@ -11,7 +11,7 @@ class CategoryController
 
     public function __construct()
     {
-        $this->categoryDB = new categoryDB();
+        $this->categoryDB = new CategoryDB();
     }
 
     public function index()

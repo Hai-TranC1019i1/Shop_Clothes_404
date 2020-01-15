@@ -1,6 +1,5 @@
 <?php
 
-
 class ShopController
 {
     private $shopDB;
@@ -13,16 +12,38 @@ class ShopController
     public function index()
     {
         $products = $this->shopDB->getAll();
-        include "view/product/home.php";
+        include_once "home.php";
+    }
+
+    public function listNewestProduct()
+    {
+        $type = $_GET["type"];
+        $products = $this->shopDB->getNewestProduct($type);
+        include_once "home.php";
+    }
+
+    public function getCategories()
+    {
+        $categoryDB = new CategoryDB();
+        return  $categoryDB->getAll();
     }
 
     public function add()
     {
+        $categories = $this->getCategories();
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            include "upload.php";
+            if (!empty($_FILES["image"]["name"])) {
+                include "upload.php";
+            }
 
-            $product = new Product($_POST["name"], $_POST["price"], $_POST["type"], $_POST["description"], $target_file);
+            $product = new Product($_POST["name"],
+                $_POST["price"],
+                $_POST["type"],
+                $_POST["description"],
+                $target_file,
+                $_POST["createdDate"]);
 
             if ($isSuccess = $this->shopDB->add($product)) {
                 $message = "Add product successful!";
@@ -37,24 +58,46 @@ class ShopController
     {
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $id = $_GET["id"];
-            $this->shopDB->getById($id);
+            $product =$this->shopDB->getById($id);
         } else {
             $this->shopDB->delete($_POST["id"]);
+            header("location: admin.php");
         }
-        include "view/delete.php";
+        include "view/product/delete.php";
 
     }
 
     public function edit()
     {
+        $categories = $this->getCategories();
+
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $id = $_GET["id"];
-            $this->shopDB->getById($id);
+            $product = $this->shopDB->getById($id);
         } else {
-            $product = new Product($_POST["name"], $_POST["price"], $_POST["type"], $_POST["description"], $target_file);
+
+            if (!empty($_FILES["image"]["name"])) {
+                include "upload.php";
+            } else {
+                $target_file = $_POST["avatar"];
+            }
+
+            $product = new Product($_POST["name"],
+                $_POST["price"],
+                $_POST["type"],
+                $_POST["description"],
+                $target_file,
+                $_POST["createdDate"]);
             $product->setId($_POST["id"]);
-            $this->shopDB->edit($product);
+
+            $isSuccess = $this->shopDB->edit($product);
+
+            if ($isSuccess) {
+                $message = 'Edit successful!';
+            } else {
+                $message = "Something error! Retry!";
+            }
         }
-        include "view/edit.php";
+        include "view/product/edit.php";
     }
 }
