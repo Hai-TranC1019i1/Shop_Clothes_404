@@ -37,12 +37,12 @@ require "model/DB.php";
 
 <body>
 
-<?php include "header.php"; ?>
+<?php include "header-admin.php"; ?>
 
 <div class="main-content">
     <?php
-        $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
-        $action = isset($_REQUEST["action"]) ? $_REQUEST["action"] : null;
+    $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
+    $action = isset($_REQUEST["action"]) ? $_REQUEST["action"] : null;
 
     switch ($page) {
         case "category":
@@ -53,21 +53,21 @@ require "model/DB.php";
     }
 
 
-        switch ($action) {
-            case "add":
-                $controller->add();
-                break;
-            case "delete":
-                $controller->delete();
-                break;
-            case "edit":
-                $controller->edit();
-                break;
-            default:
-                $controller->index();
-        }
+    switch ($action) {
+        case "add":
+            $controller->add();
+            break;
+        case "delete":
+            $controller->delete();
+            break;
+        case "edit":
+            $controller->edit();
+            break;
+        default:
+            $controller->index();
+    }
 
-        ?>
+    ?>
 </div>
 
 <!-- Footer Section Begin -->

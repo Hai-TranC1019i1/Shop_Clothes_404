@@ -10,6 +10,7 @@
             <h2>Add products: </h2>
             <form role="form" method="post" enctype="multipart/form-data">
 
+                <input type="hidden" name="createdDate" value="<?php echo $product->getCreatedDate(); ?>">
                 <div class="form-group">
                     <label for="productname" class="loginFormElement">Name Product:</label>
                     <input class="form-control" name="name" type="text" value="<?php echo $product->getName(); ?>">
@@ -21,9 +22,11 @@
                 </div>
 
                 <select class="form-control" id="productSelect" name="type"><option>Please Select Type</option>
-                    <option <?php if ($product->getType() == "Quần") echo "selected"; ?>>Quần</option>
-                    <option <?php if ($product->getType() == "Áo") echo "selected"; ?>>Áo</option>
-                    <option <?php if ($product->getType() == "Giày") echo "selected"; ?>>Giày</option>
+                    <?php foreach ($categories as $category): ?>
+                        <option value="<?php echo $category->getName(); ?>"
+                                <?php if ($category->getName() == $product->getType()) echo "selected";
+                                ?>><?php echo $category->getName(); ?></option>
+                    <?php endforeach;?>
                 </select>
 
                 <div class="form-group">
