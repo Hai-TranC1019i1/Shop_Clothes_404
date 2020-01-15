@@ -1,4 +1,12 @@
 <?php
+
+
+//require "model/Comment/Comment.php";
+//require "model/Comment/CommentDB.php";
+//require "controller/CommentController.php";
+require "model/order/Order.php";
+require "model/order/OrderDB.php";
+require "controller/OrderController.php";
 require "controller/ShopController.php";
 require "controller/CategoryController.php";
 require "model/cart/Cart.php";
@@ -9,9 +17,7 @@ require "model/product/Product.php";
 require "model/product/ProductDB.php";
 use Controller\CategoryController;
 
-//$controller = new CategoryController();
-$controller = new ShopController();
-
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -41,7 +47,7 @@ $controller = new ShopController();
 <body>
 
 <?php include "header.php"; ?>
-
+<input type="hidden" name="createdD">
 <div class="main-content">
         <?php
         $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
@@ -51,6 +57,9 @@ $controller = new ShopController();
         case "category":
             $controller = new CategoryController();
             break;
+            case 'order':
+                $controller = new OrderController();
+                break;
         default:
             $controller = new ShopController();
     }
