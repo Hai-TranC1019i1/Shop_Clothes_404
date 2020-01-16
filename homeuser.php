@@ -59,6 +59,7 @@
                         <img src="img/icons/chat.png" alt="">
                         <h4>Online support 24/7</h4>
                         <p>Với đội ngũ nhân viên tư vấn nhiệt tình hỗ trợ 24/7. </p>
+                        <br>
                     </div>
                 </div>
             </div>
@@ -71,23 +72,51 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-12">
+                            <p> 🌸Hiện nay đây là một trong những sản phẩm rất được ưa chuộng bởi phái đẹp. Sản phẩm mang đến sự thoải mái, tự tin hơn rất nhiều khi mặc.
+                                Với thiết kế đơn giản nhưng đặc biệt, đồ lót không đường may đang là người bạn đồng hành không thể thiếu với mọi cô gái.
+                                <br>
+                                🌸Không hằn lên trang phục ngoài, sản phẩm quần lót này rất thích hợp khi diện các bộ cánh ôm sát cơ thể bạn để phô diễn được nét đẹp hình thể. Hoặc bạn hoàn toàn có thể mặc bất kỳ bộ trang phục nào mà bạn muốn cũng rất tự tin, thoải mái.
+                                <br>
+                                🌸Với chất liệu vải siêu mịn, đồ lót không đường may tiếp xúc với da vừa êm vừa thoáng mịn, tạo cho bạn cảm giác thoải mái nhất như không mặc gì. Ngoài ra chất liệu co dãn tốt, có độ căng tối ưu cho người mặc, nên khi diện quần, da bạn sẽ không bị hằn
+                                <br>
+                                🌸Thiết kế đơn giản nhưng hết sức thông minh và tinh tế, quần không đường may hoàn toàn chinh phục được trái tim của chị em phụ nữ. Khác với thiết kế ren gợi cảm, đường may khỏe và chắc thì đồ lót này mang đến sự nhẹ nhàng, thanh lịch và thoải mái nhất khi mặc.</p>
+                            <a href="#" class="primary-btn look-btn">See More</a>
                             <div class="single-box-item first-box">
                                 <img src="img/f-box-1.jpg" alt="">
-                                <div class="box-text">
-                                    <span class="trend-year">2019 Party</span>
+                                <div class="box-text">L
+                                    <span class="trend-year">2020 Party</span>
                                     <h2>Jewelry</h2>
                                     <span class="trend-alert">Trend Allert</span>
+                                    <p>
+                                        🌸Giày cao gót nữ Đông Hải G81F9 sở hữu điểm nhấn đầy lôi cuốn ở phần gót giày vô cùng độc đáo.
+                                        <br>
+                                        🌸 Kiểu dáng cổ điển cùng phom giày ôm chân giúp tôn vinh nét đẹp đôi chân của bạn.
+                                        <br>
+                                        🌸Phần mũi nhọn đem đến vẻ quyến rũ cho phái nữ. Mặt sân da bóng hiện đại kết hợp với chi tiết đính nơ xinh xắn ở mũi giày giúp bạn thêm phần nữ tính và thời trang.
+                                        <br>
+                                        🌸Thiết kế êm ái, thoải mái chắc chắn đây sẽ là món phụ kiện hoàn hảo dành cho mọi quý cô.</p>
                                     <a href="#" class="primary-btn">See More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="single-box-item second-box">
+                                <p></p>
                                 <img src="img/f-box-2.jpg" alt="">
                                 <div class="box-text">
                                     <span class="trend-year">2019 Trend</span>
                                     <h2>Footwear</h2>
                                     <span class="trend-alert">Bold & Black</span>
+                                    <p> 🌸Sở hữu những đặc tính vượt trội là mềm mại, thoáng mát và chống nhăn tuyệt đối nên vải Modal ngày càng được ưa chuộng trong may mặc đặc biệt là áo sơ mi nam.
+                                        <br>
+                                        🌸Vải sợi Modal là một sản phẩm dệt may sử dụng công nghệ dệt Nano mới, gọi là công nghệ môi trường, lấy nguyên liệu từ tự nhiên từ thân gỗ Sồi. Sợi Modal hoàn toàn có khả năng phân hủy trong đất và không gây ô nhiễm môi trường. Ngoài ra, các dung môi oxit amin được sử dụng trong quá trình sản xuất hoàn toàn vô hại đối với con người.
+                                        <br>
+                                        🌸 Một trong những lợi thế của MODAL so với bông là khả năng chống co rút, một vấn đề nổi tiếng với bông. MODAL chống nhăn tốt và ko bị dính vào người khi ma sát.
+                                        <br>
+                                        🌸 Ngoài ra, vải MODAL còn có ưu điểm là giữ được sự êm ái và co giãn lâu dài vì ko bị các khoáng chất do ” nước cứng” bám vào, do vậy vẫn giữ được vẻ mới mẻ dù qua nhiều lần giặt tẩy.
+                                    </p>
+                                    <a href="#" class="primary-btn">See More</a>
+
                                 </div>
                             </div>
                         </div>
@@ -158,15 +187,17 @@
             <div class="col-lg-4 offset-lg-1">
                 <div class="lookbok-left">
                     <div class="section-title">
-                        <h2>2019 <br />#lookbook</h2>
+                        <h2>2020 <br />Lookbook</h2>
                     </div>
-                    <p>Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vestibulum malesuada
-                        aliquet libero viverra cursus. Aliquam erat volutpat. Morbi id dictum quam, ut commodo
-                        lorem. In at nisi nec arcu porttitor aliquet vitae at dui. Sed sollicitudin nulla non leo
-                        viverra scelerisque. Phasellus facilisis lobortis metus, sit amet viverra lectus finibus ac.
-                        Aenean non felis dapibus, placerat libero auctor, ornare ante. Morbi quis ex eleifend,
-                        sodales nulla vitae, scelerisque ante. Nunc id vulputate dui. Suspendisse consectetur rutrum
-                        metus nec scelerisque. s</p>
+                    <p>Lí do chính để bạn phải sở hữu ngay áo len KIRKLAND :
+                        <br>
+                        🌸Hàng xuất Châu Âu , Nhật...Cotton 100% thấm hút mồ hôi cực tốt
+                        <br>
+                        🌸Áo vải ống nhập nên không có đường chỉ 2 bên hông.
+                        <br>
+                        🌸Đặc biệt thì item này phối được với tất cả quần, váy,... trên thế giới.
+                        <br>
+                        ►Ship COD toàn quốc.</p>
                     <a href="#" class="primary-btn look-btn">See More</a>
                 </div>
             </div>

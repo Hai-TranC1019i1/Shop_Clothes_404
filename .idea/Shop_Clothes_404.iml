@@ -4,11 +4,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-<<<<<<< HEAD
     <orderEntry type="library" name="jquery-3.2.1.slim" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="star-rating" level="application" />
-=======
->>>>>>> f895af3eb016efcc65cf1e2d93ab745859f729d7
   </component>
 </module>

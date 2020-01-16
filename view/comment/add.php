@@ -1,3 +1,4 @@
+
 <div class="container" style="margin-top: 30px">
 </div>
 
@@ -25,7 +26,6 @@
                                 <img src="img/product/product-1.jpg" style="width: 20%">
                             </a>
                             <div class="media-body">
-
                                 <h4 class="media-heading user_name">Baltej Singh</h4>
                                 Wow! this is really great.
 
@@ -36,11 +36,8 @@
                 </div>
             </form>
         </div>
-        <div class="col-md-6">
+<div class="col-md-6">
 
+</div>
         </div>
     </div>
-</div>
-
-<!------ Include the above in your HEAD tag ---------->
-
