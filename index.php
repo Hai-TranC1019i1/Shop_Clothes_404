@@ -1,9 +1,9 @@
 <?php
 
 
-//require "model/Comment/Comment.php";
-//require "model/Comment/CommentDB.php";
-//require "controller/CommentController.php";
+require "model/Comment/Comment.php";
+require "model/Comment/CommentDB.php";
+require "controller/CommentController.php";
 require "model/order/Order.php";
 require "model/order/OrderDB.php";
 require "controller/OrderController.php";
@@ -18,7 +18,7 @@ require "model/product/ProductDB.php";
 use Controller\CategoryController;
 
 
-$controller = new ShopController();
+$controller = new OrderController();
 
 ?>
 <!DOCTYPE html>
