@@ -61,7 +61,7 @@ require "../model/DB.php";
 							<i class="fa fa-user"></i>
 						</span>
 					</div>
-                    <span style="color: #cccccc; text-align: center; font-size: 18px" id="alert-login"><?php echo ($message); ?></span>
+
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
 						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
@@ -69,6 +69,8 @@ require "../model/DB.php";
 							<i class="fa fa-lock"></i>
 						</span>
 					</div>
+
+                    <span style="color:red; margin-left: 15%; font-size: 18px" id="alert-login"><?php echo ($message); ?></span>
 
 					<div class="container-login100-form-btn p-t-10">
                         <a href="../index.php">

@@ -98,8 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </button>
                 </div>
 
-                <div class="text-center w-full p-t-25 p-b-230">
-                    <a href="#" class="txt1">
+                <div class="text-center w-full p-t-25 p-b-230" >
+                    <a href="login.php" class="txt1" style="color: #007bff">
                         Đăng Nhập
                     </a>
                 </div>

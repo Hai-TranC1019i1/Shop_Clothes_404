@@ -131,9 +131,13 @@ iframe {
 [ Utility ]*/
 .txt1 {
   font-family: Montserrat-Regular;
-  font-size: 16px;
-  color: #cccccc;
+  font-size: 18px;
+  color: #00c6fb;
   line-height: 1.4;
+}
+
+.txt1:hover {
+  color: red;
 }
 
 .bo1 {
@@ -182,7 +186,7 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background: #062819;
+  background: #cccccc;
 }
 
 .wrap-login100 {

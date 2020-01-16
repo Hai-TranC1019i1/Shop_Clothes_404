@@ -44,7 +44,7 @@
                         </ul>
                     </li>
                     <li><a href="./product-page.html">About</a></li>
-                    <li><a href="./check-out.html">Blog</a></li>
+                    <li><a href="Blog/index.php">Blog</a></li>
                     <li><a href="./contact.html">Liên Hệ</a></li>
                 </ul>
             </nav>

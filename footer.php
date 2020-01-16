@@ -20,7 +20,7 @@
                             <li>Cộng đồng</li>
                             <li>Công việc</li>
                             <li>Chuyển hàng</li>
-                            <li>Liên hệ chúng tôi</li>
+                            <a href="https://facebook.com/quocdan.info"><li>Liên hệ chúng tôi</li></a>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                     <div class="single-footer-widget">
                         <h4>Dịch vụ của chúng tôi</h4>
                         <ul>
-                            <li>Miễn phí vận chuyển</li>
+         owl-nav                   <li>Miễn phí vận chuyển</li>
                             <li>Hoàn trả miễn phí</li>
                             <li>Nhượng quyền của chúng tôi</li>
                             <li>Các điều khoản và điều kiện</li>
@@ -66,10 +66,10 @@
     <div class="social-links-warp" style="text-align: center">
         <div class="container">
             <div class="social-links">
-                <a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-                <a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-                <a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-                <a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+                <a href="https://facebook.com/quocdan.info" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+                <a href="https://facebook.com/quocdan.info" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+                <a href="https://facebook.com/quocdan.info" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+                <a href="https://facebook.com/quocdan.info" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
             </div>
         </div>
 
