@@ -23,29 +23,40 @@
             </div>
             <div class="header-right">
                 <img src="img/icons/search.png" alt="" class="search-trigger">
-                <img src="img/icons/man.png" alt="">
-                <a href="#">
-                    <img src="img/icons/bag.png" alt="">
-                    <span>2</span>
-                </a>
             </div>
             <div class="user-access">
-                <a href="login/register.html">Register</a>
-                <a href="login/login.html" class="in">Sign in</a>
+                <a href="login/register.html">Register / </a>
+                <a href="login/login.html"><!--class="in"-->Sign in</a>
             </div>
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li><a class="active" href="admin.php">Trang Chủ</a></li>
-                    <li><a href="./categories.html">Cửa Hàng</a>
+                    <li><a href="./index.php"
+                            <?php if ($_GET["page"] == "" && $_GET["action"] == "")
+                            echo "class='active'"?>>Trang Chủ</a></li>
+                    <li><a href="#"
+                            <?php if ($_GET["page"] == "fg")
+                            echo "class='active'"?>>Cửa Hàng</a>
                         <ul class="sub-menu">
-                            <li><a href="categories.html">Trang Sản Phẩm</a></li>
-                            <li><a href="shopping-cart.html">Thẻ Mua Sắm</a></li>
-                            <li><a href="check-out.html">Thủ Tục Thanh Toán</a></li>
+                            <li><a href="index.php?page=product&action=get-list"
+                                    <?php if ($_GET["page"] == "d")
+                                    echo "class='active'"?>>Trang Sản Phẩm</a></li>
+                            <li><a href="shopping-cart.html"
+                                    <?php if ($_GET["page"] == "s")
+                                    echo "class='active'"?>>Thẻ Mua Sắm</a></li>
+                            <li><a href=""
+                                    <?php if ($_GET["page"] == "b")
+                                    echo "class='active'"?>>Thủ Tục Thanh Toán</a></li>
                         </ul>
                     </li>
-                    <li><a href="./index.php?page=aboutme">About</a></li>
-                    <li><a href="./check-out.html">Blog</a></li>
-                    <li><a href="./contact.html">Liên Hệ</a></li>
+                    <li><a href="./index.php?page=about-me"
+                            <?php if ($_GET["page"] == "about-me")
+                            echo "class='active'"?>>About</a></li>
+                    <li><a href="./check-out.html"
+                            <?php if ($_GET["page"] == "z")
+                            echo "class='active'"?>>Blog</a></li>
+                    <li><a href="./index.php?page=contact"
+                            <?php if ($_GET["page"] == "contact")
+                            echo "class='active'"?>>Liên Hệ</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,22 +66,22 @@
 <div class="header-info">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="header-item">
                     <img src="img/icons/delivery.png" alt="">
-                    <p>Miễn phí ship với đơn hàng trên 5000$ tại Việt Nam</p>
+                    <p>Free shipping on orders over $30 in VietNam</p>
                 </div>
             </div>
             <div class="col-md-4 text-left text-lg-center">
                 <div class="header-item">
                     <img src="img/icons/voucher.png" alt="">
-                    <p>Sinh Viên  được giảm giá tới 20%</p>
+                    <p>20% Student Discount</p>
                 </div>
             </div>
             <div class="col-md-4 text-left text-xl-right">
                 <div class="header-item">
                     <img src="img/icons/sales.png" alt="">
-                    <p>Giảm giá tới 30% nếu bạn nhập mã code: QuocDanDepTrai</p>
+                    <p>10% off on dresses. Use code: 404OFF</p>
                 </div>
             </div>
         </div>

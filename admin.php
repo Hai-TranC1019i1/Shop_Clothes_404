@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+if (!$_SESSION["isAdmin"] || !isset($_SESSION["isAdmin"])) {
+    header("location: login/login.php");
+}
 
 require "controller/ShopController.php";
 require "controller/CategoryController.php";
