@@ -19,11 +19,11 @@ class ProductDB
         $stmt->execute();
         $result = $stmt->fetch();
         $product = new Product($result["name"],
-            $result["price"],
-            $result["type"],
-            $result["description"],
-            $result["image"],
-            $result["createdDate"]);
+                                $result["price"],
+                                $result["type"],
+                                $result["description"],
+                                $result["image"],
+                                $result["createdDate"]);
         $product->setId($result["id"]);
 
         return $product;
@@ -32,10 +32,51 @@ class ProductDB
     public function getNewestProduct($type)
     {
         if ($type != '') {
-            $type = "WHERE type = ".$type;
+            $type = "WHERE type = " . $type;
         }
 
-        $sql = "SELECT TOP 8 * FROM products INNER JOIN categories ON products.type = category.name ".$type." ORDER BY createdDate ASC";
+        $sql = "SELECT products.id, products.name, products.image, products.price, products.type, products.description
+                FROM products INNER JOIN categories ON products.type = categories.name "
+            . $type . " ORDER BY createdDate ASC LIMIT 0, 8";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+
+        $result = $stmt->fetchAll();
+
+        $products = [];
+
+        foreach ($result as $item) {
+            $product = new Product($item["name"],
+                                    $item["price"],
+                                    $item["type"],
+                                    $item["description"],
+                                    $item["image"],
+                                    $item["createdDate"]);
+            $product->setId($item["id"]);
+            array_push($products, $product);
+        }
+        return $products;
+    }
+
+    public function getProductByType($type, $limit = null, $isOrder = false)
+    {
+        if ($limit !== null) {
+            $limitStr = "LIMIT 0, $limit";
+        } else {
+            $limitStr = '';
+        }
+        if ($type != '') {
+            $type = "WHERE type = " . "'".$type."'";
+        }
+        if ($isOrder) {
+            $orderStr = "ORDER BY createdDate";
+        } else {
+            $orderStr = '';
+        }
+
+        $sql = "SELECT products.id, products.name, products.image, products.price, products.type, products.description
+            FROM products INNER JOIN categories ON products.type = categories.name".
+            " $orderStr $type $limitStr";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
@@ -44,12 +85,12 @@ class ProductDB
         $products = [];
         foreach ($result as $item) {
             $product = new Product($item["name"],
-                $item["price"],
-                $item["type"],
-                $item["description"],
-                $item["image"],
-                $result["createdDate"]);
-            $product->setId($result["id"]);
+                                    $item["price"],
+                                    $item["type"],
+                                    $item["description"],
+                                    $item["image"],
+                                    $item["createdDate"]);
+            $product->setId($item["id"]);
             array_push($products, $product);
         }
         return $products;
@@ -66,11 +107,11 @@ class ProductDB
         $products = [];
         foreach ($result as $item) {
             $product = new Product($item["name"],
-                $item["price"],
-                $item["type"],
-                $item["description"],
-                $item["image"],
-                $item["createdDate"]);
+                                    $item["price"],
+                                    $item["type"],
+                                    $item["description"],
+                                    $item["image"],
+                                    $item["createdDate"]);
             $product->setId($item["id"]);
             array_push($products, $product);
         }

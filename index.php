@@ -1,24 +1,5 @@
 <?php
-
-
-require "model/Comment/Comment.php";
-require "model/Comment/CommentDB.php";
-require "controller/CommentController.php";
-require "model/order/Order.php";
-require "model/order/OrderDB.php";
-require "controller/OrderController.php";
-require "controller/ShopController.php";
-require "controller/CategoryController.php";
-require "model/cart/Cart.php";
-require "model/category/Category.php";
-require "model/category/CategoryDB.php";
-require "model/DB.php";
-require "model/product/Product.php";
-require "model/product/ProductDB.php";
-use Controller\CategoryController;
-
-
-$controller = new OrderController();
+include_once "include_src.php";
 
 ?>
 <!DOCTYPE html>
@@ -52,41 +33,66 @@ $controller = new OrderController();
 <?php include "header.php"; ?>
 <input type="hidden" name="createdD">
 <div class="main-content">
-        <?php
-        $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
-        $action = isset($_REQUEST["action"]) ? $_REQUEST["action"] : null;
+    <?php
+    $page = isset($_REQUEST["page"]) ? $_REQUEST["page"] : null;
+    $action = isset($_REQUEST["action"]) ? $_REQUEST["action"] : null;
 
     switch ($page) {
         case "category":
             $controller = new CategoryController();
             break;
-            case 'order':
-                $controller = new OrderController();
-                break;
+        case 'order':
+            $controller = new OrderController();
+            break;
+        case "comment":
+            $controller = new CommentController();
+            break;
+        case "blog":
+            $controller = new BlogController();
+            break;
+        case "about-me":
+            include_once "about_me.php";
+            break;
+        case "contact":
+            include_once "contact.php";
+            break;
+        case "categories":
+            include_once "base-categories.php";
+            break;
         default:
             $controller = new ShopController();
     }
 
-
-        switch ($action) {
-            case "add":
-                $controller->add();
-                break;
-            case "delete":
-                $controller->delete();
-                break;
-            case "edit":
-                $controller->edit();
-                break;
-            default:
-                $controller->index();
-        }
-        ?>
+    switch ($action) {
+        case "add":
+            $controller->add();
+            break;
+        case "delete":
+            $controller->delete();
+            break;
+        case "edit":
+            $controller->edit();
+            break;
+        case "admin-index":
+            $controller->index();
+            break;
+        case "detail":
+            $controller->detail();
+            break;
+        case "get-list":
+            $controller->getList();
+            break;
+        default:
+            if ($page == null) {
+                $controller->listNewestProduct();
+            }
+    }
+    ?>
 
 </div>
 
 <!-- Footer Section Begin -->
-<?php include "footer.php"?>
+<?php include "footer.php" ?>
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->

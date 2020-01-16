@@ -160,10 +160,12 @@
 
         <div class="row" id="product-list">
             <?php foreach ($products as $product): ?>
-                <div class="col-lg-3 col-sm-6 mix all dresses bags">
+<!--            //mix all dresses bags-->
+                <div class="col-lg-3 col-sm-6 mix all <?php echo strtolower($product->getType()); ?>">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="<?php echo $product->getImage();?>" alt=""></a>
+                            <a href="./index.php?page=product&action=detail&id=<?php echo $product->getId(); ?>">
+                                <img src="<?php echo $product->getImage();?>" alt=""></a>
                             <div class="p-status">new</div>
                         </figure>
                         <div class="product-text">
