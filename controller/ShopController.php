@@ -15,11 +15,36 @@ class ShopController
         include_once "home.php";
     }
 
+    public function listRelativeProduct($type, $limit)
+    {
+       return $this->shopDB->getProductByType($type, $limit);
+    }
+
+    public function detail()
+    {
+        $product = $this->shopDB->getById($_GET["id"]);
+        $relativeProducts = $this->listRelativeProduct($product->getType(), 4);
+        include_once "product-page.php";
+    }
+
+    public function getList()
+    {
+        $categories = $this->getCategories();
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+            $products = $this->shopDB->getAll();
+        } else {
+            $products = $this->shopDB->getProductByType($_GET["type"]);
+        }
+
+        include_once "categories.php";
+
+    }
+
     public function listNewestProduct()
     {
         $type = $_GET["type"];
         $products = $this->shopDB->getNewestProduct($type);
-        include_once "home.php";
+        include_once "homeuser.php";
     }
 
     public function getCategories()

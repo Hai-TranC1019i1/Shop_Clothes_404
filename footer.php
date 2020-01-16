@@ -3,6 +3,7 @@
         <div class="newslatter-form">
             <div class="row">
                 <div class="col-lg-12">
+                    <H3 style="text-align: center; color:#cccccc">Vui Lòng Nhập Đánh Giá Về Chúng Tôi</H3>
                     <form action="#">
                         <input type="text" placeholder="Nhập vào thông tin">
                         <button type="submit">Nhận Thông Báo Từ Chúng Tôi</button>
@@ -67,9 +68,9 @@
         <div class="container">
             <div class="social-links">
                 <a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-                <a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+                <a href="https://www.facebook.com/codegym.vn/" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
                 <a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-                <a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+                <a href="https://www.youtube.com/channel/UCr8kW9vTj6IKPhp2sdBQdlQ" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
             </div>
         </div>
 
